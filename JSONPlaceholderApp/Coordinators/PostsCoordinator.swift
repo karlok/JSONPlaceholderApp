@@ -52,3 +52,13 @@ class PostsCoordinator: ObservableObject {
         return viewModel
     }
 }
+
+// Future enhancement: Could add deep linking support to Coordinator
+//extension PostsCoordinator {
+//    func handleDeepLink(_ link: DeepLink) {
+//        switch link {
+//        case .post(let id):
+//            // Navigate to specific post
+//        }
+//    }
+//}
