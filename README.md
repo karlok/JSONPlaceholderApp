@@ -163,7 +163,7 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 LinkedIn: [https://www.linkedin.com/in/karlokilayko/](https://www.linkedin.com/in/karlokilayko/)
 
-Project Link: [https://github.com/karlok/JSONPlaceholderSwiftApp](https://github.com/karlok/JSONPlaceholderSwiftApp)
+Project Link: [https://github.com/karlok/JSONPlaceholderApp](https://github.com/karlok/JSONPlaceholderApp)
 
 ---
 
