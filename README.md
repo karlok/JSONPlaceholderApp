@@ -1,6 +1,6 @@
 # JSONPlaceholder SwiftUI MVVM-C Example
 
-A demonstration of clean architecture in iOS using SwiftUI, following the MVVM-C (Model-View-ViewModel-Coordinator) pattern. This project showcases best practices for building scalable, maintainable iOS applications while consuming a REST API.
+A demonstration of clean architecture in iOS using SwiftUI, following the MVVM-C (Model-View-ViewModel-Coordinator) pattern. This project attempts to showcase best practices for building scalable, maintainable iOS applications while consuming a REST API.
 
 ## 🌟 Features
 
@@ -15,7 +15,7 @@ A demonstration of clean architecture in iOS using SwiftUI, following the MVVM-C
 
 ## 🏗 Architecture
 
-This project is a prime example of the MVVM-C pattern, with:
+This project is an example of the MVVM-C pattern, with:
 
 ### Clean Architecture
 - Clear separation of concerns
