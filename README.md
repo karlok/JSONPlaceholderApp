@@ -85,7 +85,7 @@ This project is an example of the MVVM-C pattern, with:
 ### Installation
 1. Clone the repository
 ```bash
-git clone https://github.com/yourusername/JSONPlaceholderSwiftUI.git
+git clone https://github.com/yourusername/JSONPlaceholderApp.git
 ```
 2. Open `JSONPlaceholderApp.xcodeproj` in Xcode
 3. Build and run the project
