@@ -11,10 +11,18 @@ struct ContentView: View {
     @StateObject private var coordinator = PostsCoordinator()
     
     var body: some View {
-        PostListView(
-            viewModel: coordinator.listViewModel,
-            onRefresh: { await coordinator.refreshPosts() }
-        )
+        NavigationStack(path: $coordinator.navigationPath) {
+            PostListView(
+                viewModel: coordinator.listViewModel,
+                onRefresh: { await coordinator.refreshPosts() }
+            )
+            .navigationDestination(for: Int.self) { postId in
+                PostDetailView(
+                    postId: postId,
+                    viewModel: coordinator.createDetailViewModel(for: postId)
+                )
+            }
+        }
         .environmentObject(coordinator)
     }
 }

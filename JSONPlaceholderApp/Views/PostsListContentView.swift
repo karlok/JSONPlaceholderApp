@@ -13,11 +13,8 @@ struct PostsListContentView: View {
     
     var body: some View {
         List(posts) { post in
-            NavigationLink {
-                PostDetailView(
-                    postId: post.id,
-                    viewModel: coordinator.createDetailViewModel(for: post.id)
-                )
+            Button {
+                coordinator.navigateToPostDetail(postId: post.id)
             } label: {
                 PostRowView(post: post)
             }

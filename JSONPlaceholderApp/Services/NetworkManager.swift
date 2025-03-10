@@ -18,11 +18,22 @@ class NetworkManager {
             throw NetworkError.invalidURL
         }
         
+#if DEBUG
+        print("📡 Request: \(url.absoluteString)")
+#endif
+        
         let (data, response) = try await URLSession.shared.data(from: url)
         
-        guard let httpResponse = response as? HTTPURLResponse, 
-              (200...299).contains(httpResponse.statusCode) else {
+        guard let httpResponse = response as? HTTPURLResponse else {
             throw NetworkError.invalidResponse
+        }
+        
+#if DEBUG
+        print("📡 Response: \(httpResponse.statusCode) for \(url.absoluteString)")
+#endif
+        
+        guard (200...299).contains(httpResponse.statusCode) else {
+            throw NetworkError.serverError(statusCode: httpResponse.statusCode)
         }
         
         do {

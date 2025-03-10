@@ -27,6 +27,7 @@ import SwiftUI
 
 @MainActor
 class PostsCoordinator: ObservableObject {
+    @Published var navigationPath = NavigationPath()
     @Published var listViewModel: PostListViewModel
     
     init(apiService: APIServiceProtocol = APIService()) {
@@ -50,6 +51,19 @@ class PostsCoordinator: ObservableObject {
             await viewModel.fetchPostDetails(postId: postId)
         }
         return viewModel
+    }
+    
+    // Navigation methods
+    func navigateToPostDetail(postId: Int) {
+        navigationPath.append(postId)
+    }
+    
+    func navigateBack() {
+        navigationPath.removeLast()
+    }
+    
+    func navigateToRoot() {
+        navigationPath = NavigationPath()
     }
 }
 
